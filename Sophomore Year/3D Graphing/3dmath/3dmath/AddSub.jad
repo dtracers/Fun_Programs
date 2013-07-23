@@ -1,0 +1,149 @@
+// Decompiled by DJ v3.6.6.79 Copyright 2004 Atanas Neshkov  Date: 11/10/2009 9:58:24 AM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   levelmaker.java
+
+import java.util.ArrayList;
+
+class AddSub extends levelmaker
+{
+
+    public AddSub(Tree tree)
+    {
+        super(tree);
+    }
+
+    public void getlevel(Tree tree, Tree tree1)
+    {
+        char c = getchar(tree);
+        if(c == '-')
+        {
+            getlevel(tree.left, tree1.left);
+            sign.add((new StringBuilder()).append("").append(tree).toString());
+            if(getchar(tree.right) == '+')
+                tree.right.ex = "-";
+            getlevel(tree.right, tree1.right);
+        } else
+        if(c == '+')
+        {
+            getlevel(tree.left, tree1.left);
+            sign.add((new StringBuilder()).append("").append(tree).toString());
+            getlevel(tree.right, tree1.right);
+        } else
+        {
+            level.add(tree1);
+        }
+    }
+
+    private char getchar(Tree tree)
+    {
+        if(tree.ex != null && !tree.ex.equals(""))
+        {
+            char c = tree.ex.charAt(0);
+            return c;
+        } else
+        {
+            return ' ';
+        }
+    }
+
+    public void cancel()
+    {
+        ArrayList arraylist = new ArrayList();
+        ArrayList arraylist1 = new ArrayList();
+        arraylist.add(level.get(0));
+        for(int i = 1; i < level.size(); i++)
+            if(((String)sign.get(i - 1)).equals("+"))
+                arraylist.add(level.get(i));
+            else
+                arraylist1.add(level.get(i));
+
+        cancel(arraylist, arraylist1);
+    }
+
+    public void cancel(ArrayList arraylist, ArrayList arraylist1)
+    {
+        boolean flag = false;
+        for(int i = 0; i < arraylist.size(); i++)
+        {
+            for(int j = 0; j < arraylist1.size() && i >= 0; j++)
+            {
+                Tree tree = (Tree)arraylist.get(i);
+                Tree tree1 = (Tree)arraylist1.get(j);
+                if(!((Tree)arraylist.get(i)).equals((Tree)arraylist1.get(j), 0))
+                    continue;
+                int k = level.indexOf(arraylist.get(i));
+                int l = level.indexOf(arraylist1.get(j));
+                level.remove(arraylist.get(i));
+                level.remove(arraylist1.get(j));
+                if(flag)
+                {
+                    if(l == 0 && ((String)sign.get(0)).equals("-"))
+                    {
+                        sign.remove(0);
+                        if(k == 1 && ((String)sign.get(0)).equals("+"))
+                        {
+                            sign.remove(0);
+                            flag = false;
+                        }
+                    }
+                    if(l != 0)
+                    {
+                        sign.remove(l);
+                        if(l > k && k > 0)
+                            k--;
+                        sign.remove(k);
+                    }
+                } else
+                {
+                    if(l == 0 && ((String)sign.get(0)).equals("-"))
+                        flag = true;
+                    else
+                    if(l > 0)
+                        sign.remove(l - 1);
+                    if(k == 0 && ((String)sign.get(0)).equals("+"))
+                    {
+                        sign.remove(0);
+                    } else
+                    {
+                        if(l < k)
+                            k--;
+                        if(k - 1 >= 0)
+                            sign.remove(k - 1);
+                    }
+                }
+                arraylist.remove(arraylist.get(i));
+                arraylist1.remove(arraylist1.get(j));
+                i--;
+                j--;
+            }
+
+        }
+
+    }
+
+    public void combine()
+    {
+        String s = "";
+        boolean flag = false;
+        for(int i = 0; i < level.size(); i++)
+        {
+            if(i == 0 && level.size() == sign.size() && ((String)sign.get(0)).equals("-"))
+            {
+                s = (new StringBuilder()).append(s).append("0").append((String)sign.remove(0)).append(((Tree)level.get(0)).toString2()).toString();
+                continue;
+            }
+            if(i != 0)
+            {
+                s = (new StringBuilder()).append(s).append((String)sign.get(i - 1)).append(((Tree)level.get(i)).toString2()).toString();
+                continue;
+            }
+            if(i == 0)
+                s = (new StringBuilder()).append(s).append(((Tree)level.get(i)).toString2()).toString();
+        }
+
+        if(level.size() == 0)
+            s = "0";
+        setTree((new expressiontree()).getTree(s));
+    }
+}

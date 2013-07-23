@@ -1,0 +1,109 @@
+// Decompiled by DJ v3.6.6.79 Copyright 2004 Atanas Neshkov  Date: 11/10/2009 9:56:02 AM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   levelmaker.java
+
+import java.io.PrintStream;
+
+class Resolve2 extends Resolve
+{
+
+    public Resolve2(Tree tree)
+    {
+        super(tree);
+    }
+
+    public void getlevel(Tree tree, Tree tree1)
+    {
+        super.getlevel(tree);
+        getlevel(tree);
+        super.getlevel(tree);
+        setTree(tree);
+    }
+
+    protected boolean getlevel(Tree tree)
+    {
+        Tree tree1 = tree.left;
+        Tree tree2 = tree.right;
+        if(isconstant(tree) && tree.v == 0.0D)
+            return true;
+        if(tree1 != null && tree2 != null)
+        {
+            getlevel(tree1);
+            getlevel(tree2);
+            boolean flag = isconstant(tree1);
+            boolean flag1 = isconstant(tree2);
+            if(flag)
+                if(tree1.v == 0.0D)
+                {
+                    System.out.println((new StringBuilder()).append("L0 ").append(tree.ex.charAt(0)).toString());
+                    System.out.println(tree.toString2());
+                    switch(tree.ex.charAt(0))
+                    {
+                    case 42: // '*'
+                        tree.reset(0.0D);
+                        return true;
+
+                    case 47: // '/'
+                        tree.reset(0.0D);
+                        return true;
+
+                    case 43: // '+'
+                        tree.reset(tree2);
+                        return true;
+                    }
+                } else
+                if(tree1.v == 1.0D)
+                {
+                    System.out.println((new StringBuilder()).append("L1 ").append(tree.ex.charAt(0)).toString());
+                    System.out.println(tree.toString2());
+                    switch(tree.ex.charAt(0))
+                    {
+                    case 42: // '*'
+                        tree.reset(tree2);
+                        return true;
+                    }
+                }
+            if(flag1)
+                if(tree2.v == 0.0D)
+                {
+                    System.out.println((new StringBuilder()).append("R0 ").append(tree.ex.charAt(0)).toString());
+                    System.out.println(tree.toString2());
+                    switch(tree.ex.charAt(0))
+                    {
+                    case 42: // '*'
+                        tree.reset(0.0D);
+                        return true;
+
+                    case 43: // '+'
+                        tree.reset(tree1);
+                        return true;
+                    }
+                } else
+                if(tree2.v == 1.0D)
+                {
+                    System.out.println((new StringBuilder()).append("R1 ").append(tree.ex.charAt(0)).toString());
+                    System.out.println(tree.toString2());
+                    switch(tree.ex.charAt(0))
+                    {
+                    case 42: // '*'
+                        tree.reset(tree1);
+                        return true;
+
+                    case 47: // '/'
+                        tree.reset(tree1);
+                        return true;
+                    }
+                }
+        }
+        return false;
+    }
+
+    public void cancel()
+    {
+    }
+
+    public void combine()
+    {
+    }
+}

@@ -1,0 +1,1 @@
+(x*sin(y)+y*sin(x))/(y*sin(x)-(x*sin(y)))

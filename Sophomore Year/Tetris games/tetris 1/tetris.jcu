@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace_user>
+	<active_project>
+		<label>tetris</label>
+	</active_project>
+	<projects>
+		<project>
+			<label>tetris</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>tetris</path>
+			</folderitem>
+			<fileitem>
+				<path>tetris\tetrisworksshow.java</path>
+				<collapsedfolds>0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1017;1002;960;930;917;888;881;874;844;781;742;412;380;335;278;150;145;133;128;124;120;1193;1189;1150;1146;1029;620;524;498;424;234</collapsedfolds>
+			</fileitem>
+		</project>
+	</projects>
+	<open_files>
+		<docitem>
+			<path>tetris\tetris1.html</path>
+			<source>true</source>
+			<index>0</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>J:\tetris\out.dat</path>
+			<source>true</source>
+			<index>1</index>
+			<active>true</active>
+		</docitem>
+		<docitem>
+			<path>J:\tetris\tetrisworksshow.java</path>
+			<source>true</source>
+			<index>2</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>J:\tetris\tetrisshow.html</path>
+			<source>true</source>
+			<index>3</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>J:\tetris\about:blank</path>
+			<source>false</source>
+			<index>4</index>
+			<active>false</active>
+		</docitem>
+	</open_files>
+</workspace_user>

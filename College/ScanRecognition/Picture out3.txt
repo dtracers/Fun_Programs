@@ -1,0 +1,17 @@
+Color = java.awt.Color[r=159,g=192,b=173]Total Time= 179 First Half= 178 Second Half= 1 Total Size = 2993
+Color = java.awt.Color[r=173,g=204,b=186]Total Time= 271 First Half= 250 Second Half= 21 Total Size = 4788
+Color = java.awt.Color[r=105,g=98,b=82]Total Time= 551 First Half= 550 Second Half= 1 Total Size = 11632
+Color = java.awt.Color[r=131,g=140,b=145]Total Time= 149 First Half= 148 Second Half= 1 Total Size = 4964
+Color = java.awt.Color[r=136,g=156,b=145]Total Time= 165 First Half= 164 Second Half= 1 Total Size = 6085
+Color = java.awt.Color[r=181,g=215,b=199]Total Time= 84 First Half= 83 Second Half= 1 Total Size = 3834
+Color = java.awt.Color[r=193,g=229,b=215]Total Time= 51 First Half= 47 Second Half= 4 Total Size = 2089
+Color = java.awt.Color[r=117,g=113,b=101]Total Time= 134 First Half= 133 Second Half= 1 Total Size = 4069
+Color = java.awt.Color[r=49,g=52,b=41]Total Time= 64 First Half= 63 Second Half= 1 Total Size = 1788
+Color = java.awt.Color[r=24,g=26,b=23]Total Time= 62 First Half= 61 Second Half= 1 Total Size = 2117
+Color = java.awt.Color[r=20,g=15,b=12]Total Time= 75 First Half= 75 Second Half= 0 Total Size = 2277
+Color = java.awt.Color[r=3,g=18,b=23]Total Time= 128 First Half= 127 Second Half= 1 Total Size = 3941
+Color = java.awt.Color[r=93,g=88,b=69]Total Time= 206 First Half= 206 Second Half= 0 Total Size = 6142
+Color = java.awt.Color[r=5,g=0,b=0]Total Time= 106 First Half= 106 Second Half= 0 Total Size = 3909
+Color = java.awt.Color[r=16,g=17,b=22]Total Time= 67 First Half= 67 Second Half= 0 Total Size = 2102
+Color = java.awt.Color[r=55,g=45,b=35]Total Time= 53 First Half= 49 Second Half= 4 Total Size = 1859
+DONE! Total Time = 17550

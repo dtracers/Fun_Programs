@@ -1,0 +1,6 @@
+Color = java.awt.Color[r=255,g=255,b=255]Total Time= 6062 First Half= 6061 Second Half= 1 Total Size = 108102
+Color = java.awt.Color[r=241,g=241,b=241]Total Time= 736 First Half= 724 Second Half= 12 Total Size = 31634
+Color = java.awt.Color[r=233,g=233,b=233]Total Time= 7069 First Half= 7068 Second Half= 1 Total Size = 101944
+Color = java.awt.Color[r=222,g=229,b=235]Total Time= 52 First Half= 51 Second Half= 1 Total Size = 2876
+Color = java.awt.Color[r=248,g=248,b=248]Total Time= 68 First Half= 67 Second Half= 1 Total Size = 6609
+DONE! Total Time = 16719

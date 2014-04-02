@@ -1,0 +1,9 @@
+Color = java.awt.Color[r=255,g=255,b=255]Total Time= 103 First Half= 97 Second Half= 6
+Color = java.awt.Color[r=141,g=141,b=141]Total Time= 157 First Half= 141 Second Half= 16
+Color = java.awt.Color[r=126,g=143,b=135]Total Time= 112 First Half= 96 Second Half= 16
+Color = java.awt.Color[r=136,g=136,b=136]Total Time= 55 First Half= 39 Second Half= 16
+Color = java.awt.Color[r=177,g=66,b=75]Total Time= 184 First Half= 3 Second Half= 181
+Color = java.awt.Color[r=129,g=129,b=129]Total Time= 576 First Half= 563 Second Half= 13
+Color = java.awt.Color[r=191,g=191,b=191]Total Time= 66 First Half= 62 Second Half= 4
+Color = java.awt.Color[r=194,g=198,b=197]Total Time= 573 First Half= 569 Second Half= 4
+Color = java.awt.Color[r=246,g=246,b=246]Total Time= 12587 First Half= 12582 Second Half= 5
